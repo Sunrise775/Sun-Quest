@@ -74,7 +74,7 @@ body::before {
 }
 
 
-/* subtle diagonal road graphics */
+
 
 body::after {
     content: "";
@@ -347,7 +347,7 @@ body::after {
 }
 
 
-/* map grid */
+
 
 .journey-map::before {
     content: "";
@@ -986,7 +986,7 @@ body::after {
 .video-frame {
     width: min(1000px, 95vw);
 
-    /* On phones held sideways, never taller than the screen */
+   
     width: min(1000px, 95vw, calc((100dvh - 24px) * 16 / 9));
 
     aspect-ratio: 16 / 9;
@@ -1009,7 +1009,6 @@ body::after {
 }
 
 
-/* Phone friendly video modal */
 
 @media (max-width: 800px) {
 
@@ -1030,7 +1029,6 @@ body::after {
         border-radius: 50%;
     }
 
-    /* Leave room for the close button above the video in portrait */
     .video-frame {
         margin-top: 40px;
     }
