@@ -1,7 +1,4 @@
-/* =====================================================
-   MY STORY
-   Scroll Reveal Animation
-   ===================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -9,12 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".reveal");
 
 
-    /*
-     * Intersection Observer
-     *
-     * Detects when each chapter enters
-     * the visitor's screen.
-     */
+    
 
     const observerOptions = {
 
@@ -35,10 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         entry.target.classList.add("active");
 
-                        /*
-                         * Stop observing after
-                         * the animation has happened.
-                         */
+                      
 
                         observer.unobserve(
                             entry.target
@@ -53,9 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    /*
-     * Observe every story element
-     */
+
 
     revealElements.forEach(element => {
 
@@ -84,7 +71,6 @@ function closePhoto() {
 }
 
 
-/* Close when clicking the dark background */
 
 document.getElementById("photoLightbox").addEventListener("click", function(event) {
 
@@ -95,7 +81,7 @@ document.getElementById("photoLightbox").addEventListener("click", function(even
 });
 
 
-/* Close with ESC */
+
 
 document.addEventListener("keydown", function(event) {
 
