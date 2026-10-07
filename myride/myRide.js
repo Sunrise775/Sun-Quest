@@ -29,9 +29,7 @@ const motorcyclePositions = {
 };
 
 
-/*
-    Select Journey
-*/
+
 
 mapPoints.forEach(point => {
 
@@ -40,7 +38,7 @@ mapPoints.forEach(point => {
         const journeyName = this.dataset.journey;
 
 
-        /* Remove active state */
+        
 
         mapPoints.forEach(item => {
             item.classList.remove("active");
@@ -52,12 +50,11 @@ mapPoints.forEach(point => {
         });
 
 
-        /* Activate selected point */
 
         this.classList.add("active");
 
 
-        /* Activate story */
+      
 
         const selectedStory =
             document.getElementById(journeyName);
@@ -69,7 +66,7 @@ mapPoints.forEach(point => {
         }
 
 
-        /* Move Miya */
+      
 
         const position =
             motorcyclePositions[journeyName];
@@ -85,7 +82,7 @@ mapPoints.forEach(point => {
         }
 
 
-        /* Scroll to story */
+    
 
         setTimeout(() => {
 
@@ -139,7 +136,6 @@ function closePhoto() {
 }
 
 
-/* Close lightbox when clicking background */
 
 document
     .getElementById("photoLightbox")
@@ -167,7 +163,6 @@ function getYouTubeId(source) {
 
     if (match) return match[1];
 
-    /* Plain 11-character video ID */
     if (/^[\w-]{11}$/.test(source)) return source;
 
     return null;
@@ -246,7 +241,7 @@ function openVideo(videoSource) {
         video.src = videoSource;
 
         video.play().catch(() => {
-            /* Browser may require manual play */
+           
         });
 
     }
@@ -271,14 +266,14 @@ function closeVideo() {
         document.getElementById("youtubePlayer");
 
 
-    /* Stop YouTube */
+  
 
     youtube.src = "";
 
     youtube.hidden = true;
 
 
-    /* Stop local video */
+    
 
     video.pause();
 
@@ -295,7 +290,7 @@ function closeVideo() {
 }
 
 
-/* Close video when clicking background */
+
 
 document
     .getElementById("videoModal")
