@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>My Life | Sun Quest</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="life.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         BACKGROUND
+    =============================== -->
+    <div class="background-glow"></div>
+    <div class="road-lines"></div>
+
+
+    <!-- ==============================
+         NAVIGATION
+    =============================== -->
+    <nav class="top-nav">
+        <a href="../index.html" class="back-home">
+            ← Back to Home
+        </a>
+
+        <div class="nav-logo">
+            SUN QUEST
+            <span>1 MILE AT A TIME</span>
+        </div>
+    </nav>
+
+
+    <!-- ==============================
+         HERO
+    =============================== -->
+    <header class="hero">
+
+        <p class="eyebrow">MY LIFE • MY JOURNEY</p>
+
+        <h1>
+            The Road That<br>
+            Made <span>Me</span>
+        </h1>
+
+        <p class="hero-description">
+            A story of dreams, setbacks, work, family, adventure,
+            and the road still waiting ahead.
+        </p>
+
+        <div class="scroll-indicator">
+            <span>Scroll to begin</span>
+            <div class="scroll-line"></div>
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         TIMELINE
+    =============================== -->
+    <main class="timeline-section">
+
+        <div class="timeline-header">
+            <p class="eyebrow">MY LIFE TIMELINE</p>
+
+            <h2>
+                Every Chapter<br>
+                <span>Led Me Here.</span>
+            </h2>
+
+            <p>
+                Click a chapter to explore the memories,
+                choices, lessons and dreams that shaped my journey.
+            </p>
+        </div>
+
+
+        <!-- Timeline -->
+        <div class="timeline-wrapper" id="timelineWrapper" tabindex="0"
+             aria-label="Life timeline. Scroll sideways to move through the chapters.">
+
+        <div class="timeline-inner">
+
+            <div class="timeline-track"></div>
+
+            <!-- Walking person -->
+            <div class="walker" id="walker">
+                <div class="walker-body">🚶</div>
+                <div class="walker-shadow"></div>
+            </div>
+
+
+            <!-- ==================================
+                 CHAPTER 01
+            =================================== -->
+            <article class="timeline-item active"
+                     data-chapter="1"
+                     data-title="Growing Up"
+                     data-year="Childhood"
+                     data-position="0">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="chapter-number">01</span>
+
+                    <h3>Growing Up</h3>
+
+                    <span class="timeline-year">
+                        Childhood
+                    </span>
+
+                    <p>
+                        A shy and quiet kid with a big dream,
+                        growing up in Surigao City.
+                    </p>
+
+                    <button class="open-story">
+                        Explore Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- ==================================
+                 CHAPTER 02
+            =================================== -->
+            <article class="timeline-item"
+                     data-chapter="2"
+                     data-title="School Years"
+                     data-year="College"
+                     data-position="10">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="chapter-number">02</span>
+
+                    <h3>School Years</h3>
+
+                    <span class="timeline-year">
+                        SNSU
+                    </span>
+
+                    <p>
+                        Computers, gadgets, gaming and the dream
+                        of becoming a software engineer.
+                    </p>
+
+                    <button class="open-story">
+                        Explore Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- ==================================
+                 CHAPTER 03
+            =================================== -->
+            <article class="timeline-item"
+                     data-chapter="3"
+                     data-title="My First Job"
+                     data-year="Age 18"
+                     data-position="20">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="chapter-number">03</span>
+
+                    <h3>My First Job</h3>
+
+                    <span class="timeline-year">
+                        Age 18
+                    </span>
+
+                    <p>
+                        Leaving school and discovering that
+                        working life was not as easy as it looked.
+                    </p>
+
+                    <button class="open-story">
+                        Explore Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- ==================================
+                 CHAPTER 04
+            =================================== -->
+            <article class="timeline-item"
+                     data-chapter="4"
+                     data-title="Finding My Path"
+                     data-year="The Turning Point"
+                     data-position="30">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="chapter-number">04</span>
+
+                    <h3>Finding My Path</h3>
+
+                    <span class="timeline-year">
+                        The Turning Point
+                    </span>
+
+                    <p>
+                        Leaving my comfort zone and discovering
+                        a completely different direction.
+                    </p>
+
+                    <button class="open-story">
+                        Explore Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- ==================================
+                 CHAPTER 05
+            =================================== -->
+            <article class="timeline-item"
+                     data-chapter="5"
+                     data-title="The Hard Years"
+                     data-year="The Challenge"
+                     data-position="40">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="chapter-number">05</span>
+
+                    <h3>The Hard Years</h3>
+
+                    <span class="timeline-year">
+                        The Challenge
+                    </span>
+
+                    <p>
+                        Learning to stand on my own and
+                        face whatever life put in front of me.
+                    </p>
+
+                    <button class="open-story">
+                        Explore Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- ==================================
+                 CHAPTER 06
+            =================================== -->
+            <article class="timeline-item"
+                     data-chapter="6"
+                     data-title="People Who Changed Me"
+                     data-year="Family"
+                     data-position="50">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="chapter-number">06</span>
+
+                    <h3>My Family</h3>
+
+                    <span class="timeline-year">
+                        The People Behind Me
+                    </span>
+
+                    <p>
+                        The people who continued to support me,
+                        even when my path was different.
+                    </p>
+
+                    <button class="open-story">
+                        Explore Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- ==================================
+                 CHAPTER 07
+            =================================== -->
+            <article class="timeline-item"
+                     data-chapter="7"
+                     data-title="The Operator"
+                     data-year="Today"
+                     data-position="60">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="chapter-number">07</span>
+
+                    <h3>The Operator</h3>
+
+                    <span class="timeline-year">
+                        Underground
+                    </span>
+
+                    <p>
+                        From leaving my comfort zone to becoming
+                        an underground equipment operator.
+                    </p>
+
+                    <button class="open-story">
+                        Explore Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- ==================================
+                 CHAPTER 08
+            =================================== -->
+            <article class="timeline-item"
+                     data-chapter="8"
+                     data-title="Things I Learned"
+                     data-year="Lessons"
+                     data-position="70">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="chapter-number">08</span>
+
+                    <h3>Things I Learned</h3>
+
+                    <span class="timeline-year">
+                        Life Lessons
+                    </span>
+
+                    <p>
+                        Life does not always follow the plan.
+                        Sometimes another road leads somewhere better.
+                    </p>
+
+                    <button class="open-story">
+                        Explore Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- ==================================
+                 CHAPTER 09
+            =================================== -->
+            <article class="timeline-item"
+                     data-chapter="9"
+                     data-title="Where I Am Now"
+                     data-year="Present"
+                     data-position="80">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="chapter-number">09</span>
+
+                    <h3>Where I Am Now</h3>
+
+                    <span class="timeline-year">
+                        The Present
+                    </span>
+
+                    <p>
+                        Still working, still learning,
+                        still moving forward.
+                    </p>
+
+                    <button class="open-story">
+                        Explore Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- ==================================
+                 CHAPTER 10
+            =================================== -->
+            <article class="timeline-item"
+                     data-chapter="10"
+                     data-title="The Dream"
+                     data-year="What's Next"
+                     data-position="90">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="chapter-number">10</span>
+
+                    <h3>The Dream</h3>
+
+                    <span class="timeline-year">
+                        What's Next
+                    </span>
+
+                    <p>
+                        One motorcycle. One rider.
+                        A world of roads waiting to be explored.
+                    </p>
+
+                    <button class="open-story">
+                        Explore Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- ==================================
+                 CHAPTER 11
+            =================================== -->
+            <article class="timeline-item final-item"
+                     data-chapter="11"
+                     data-title="The Journey Continues"
+                     data-year="1 Mile at a Time"
+                     data-position="100">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card final-card">
+
+                    <span class="chapter-number">11</span>
+
+                    <h3>The Journey Continues</h3>
+
+                    <span class="timeline-year">
+                        1 Mile at a Time
+                    </span>
+
+                    <p>
+                        There are still roads I've never ridden,
+                        places I've never seen, and stories waiting
+                        to be written.
+                    </p>
+
+                    <button class="open-story">
+                        Read Final Chapter →
+                    </button>
+
+                </div>
+            </article>
+
+        </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==============================
+         STORY MODAL
+    =============================== -->
+    <div class="story-modal" id="storyModal">
+
+        <div class="story-window">
+
+            <button class="close-modal" id="closeModal" aria-label="Close story">
+                ×
+            </button>
+
+            <div class="story-content">
+
+                <span class="modal-chapter" id="modalChapter">
+                    CHAPTER 01
+                </span>
+
+                <span class="modal-year" id="modalYear">
+                    Childhood
+                </span>
+
+                <h2 id="modalTitle">
+                    Growing Up
+                </h2>
+
+                <div class="story-divider"></div>
+
+                <div id="modalStory"></div>
+
+                <div class="media-area">
+
+                    <div class="media-placeholder">
+                        <span>YOUR PHOTO</span>
+                        <small>
+                            Add your life photos here later
+                        </small>
+                    </div>
+
+                    <div class="media-placeholder">
+                        <span>YOUR VIDEO</span>
+                        <small>
+                            Add your video here later
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         FINAL MESSAGE
+    =============================== -->
+    <section class="ending">
+
+        <div class="ending-content">
+
+            <span class="eyebrow">
+                THE ROAD AHEAD
+            </span>
+
+            <h2>
+                The Journey<br>
+                <span>Continues.</span>
+            </h2>
+
+            <p>
+                I don't know exactly where the road will take me.
+                But I know I want to keep moving.
+            </p>
+
+            <p class="ending-quote">
+                “Take whatever life throws at you,
+                and turn it into something stronger.”
+            </p>
+
+            <div class="signature">
+                Correy
+                <span>Sun Quest</span>
+            </div>
+
+            <div class="motto">
+                1 MILE AT A TIME
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+    <script src="life.js"></script>
+
+</body>
+</html>
