@@ -1,11 +1,11 @@
-/* SUN QUEST - 1 Road at A Time (mobile-friendly rewrite) */
+
 (() => {
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isTouch = matchMedia("(pointer: coarse)").matches || innerWidth < 768;
 
-  /* Loader (~1.5s total) + hero intro */
+ 
   window.addEventListener("load", () => {
     const loader = $("#loader");
     const done = () => { loader && loader.remove(); $(".hero-content")?.classList.add("in"); };
@@ -13,7 +13,6 @@
     setTimeout(() => { loader.classList.add("hide"); setTimeout(done, 600); }, reduceMotion ? 0 : 900);
   });
 
-  /* Smooth scroll (only for same-page anchors) */
   $$('a[href^="#"]').forEach(a => a.addEventListener("click", e => {
     const t = $(a.getAttribute("href"));
     if (!t) return;
@@ -21,7 +20,7 @@
     t.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
   }));
 
-  /* Mobile menu */
+
   const menuBtn = $("#menuBtn"), navMenu = $("#navMenu");
   const setMenu = open => {
     if (!menuBtn || !navMenu) return;
@@ -35,7 +34,7 @@
   addEventListener("resize", () => innerWidth > 860 && setMenu(false));
   addEventListener("keydown", e => e.key === "Escape" && setMenu(false));
 
-  /* Scroll reveal + active nav (IntersectionObserver) */
+
   const sections = $$("section[id]");
   const revealIO = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add("show"); revealIO.unobserve(e.target); }
@@ -49,7 +48,7 @@
   }), { rootMargin: "-45% 0px -50% 0px" });
   [$("#hero"), ...sections].filter(Boolean).forEach(s => navIO.observe(s));
 
-  /* One light scroll handler: navbar, back-to-top, parallax (desktop only) */
+
   const navbar = $("#navbar"), heroVideo = $("#hero-video");
   const topBtn = document.createElement("button");
   topBtn.id = "topBtn"; topBtn.type = "button"; topBtn.setAttribute("aria-label", "Back to top"); topBtn.textContent = "↑";
@@ -68,7 +67,7 @@
   addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   onScroll();
 
-  /* Counters */
+  
   const stats = $("#stats");
   if (stats) {
     const io = new IntersectionObserver(([e]) => {
@@ -87,7 +86,7 @@
     io.observe(stats);
   }
 
-  /* Lightbox with swipe */
+
   const imgs = $$(".gallery-card img"), lb = $("#lightbox"), lbImg = $("#lightboxImage");
   if (lb && lbImg && imgs.length) {
     let i = 0;
@@ -114,7 +113,7 @@
     });
   }
 
-  /* The Road So Far */
+
   const places = {
     surigao: ["Surigao City", "My hometown and where my motorcycle journey truly began. Every ride reminds me that every great adventure starts close to home."],
     butuan: ["Siargao", "One of my favorite rides, filled with long highways and memorable moments."],
