@@ -1,35 +1,3 @@
-/*==========================================================
-
-    SUN QUEST — 1 Road at A Time
-    Main stylesheet (index.html)
-
-    CONTENTS
-    01  Base
-    02  Loader
-    03  Navigation
-    04  Hero
-    05  Chapters (the bordered sections)
-    06  Stats
-    07  Chapter 4 — The Road So Far
-    08  Chapter 5 — Gallery
-    09  Chapter 6 — Stories
-    10  Chapter 7 — Family
-    11  Chapter 8 — Goals
-    12  Contact form
-    13  Footer
-    14  Lightbox
-    15  Back-to-top button
-    16  Journal page (older page, kept so it doesn't break)
-    17  Animations
-    18  Responsive (tablet, phone, touch, reduced motion)
-
-==========================================================*/
-
-
-/*==========================================================
-    01  BASE
-==========================================================*/
-
 *{
     margin:0;
     padding:0;
@@ -79,9 +47,6 @@ video{
 }
 
 
-/*==========================================================
-    02  LOADER
-==========================================================*/
 
 #loader{
     position:fixed;
@@ -93,7 +58,7 @@ video{
     align-items:center;
     text-align:center;
     padding:20px;
-    z-index:10000;          /* above the navigation */
+    z-index:10000;       
     transition:opacity .6s ease;
 }
 
@@ -102,7 +67,7 @@ video{
     pointer-events:none;
 }
 
-/* The logo is a circle from the very first frame */
+
 #loader img{
     width:140px;
     height:140px;
@@ -132,10 +97,6 @@ video{
 }
 
 
-/*==========================================================
-    03  NAVIGATION
-==========================================================*/
-
 #navbar{
     position:fixed;
     top:0;
@@ -156,7 +117,6 @@ video{
     padding:16px 70px;
 }
 
-/* Round logo */
 .logo img{
     display:block;
     width:70px;
@@ -219,10 +179,6 @@ video{
     cursor:pointer;
 }
 
-
-/*==========================================================
-    04  HERO
-==========================================================*/
 
 #hero{
     position:relative;
@@ -287,7 +243,6 @@ video{
     margin-bottom:45px;
 }
 
-/* Fade-in one after another (added by script.js) */
 .hero-content.in .hero-title      { animation:fadeUp 1.4s ease 0s   backwards; }
 .hero-content.in .hero-tagline    { animation:fadeUp 1.4s ease .5s  backwards; }
 .hero-content.in .hero-description{ animation:fadeUp 1.4s ease 1s   backwards; }
@@ -335,16 +290,10 @@ video{
 }
 
 
-/*==========================================================
-    05  CHAPTERS  (every chapter sits inside its own border)
-==========================================================*/
-
-/* Space between one chapter and the next */
 .chapter{
     padding:45px 6%;
 }
 
-/* The bordered frame */
 .chapter .container{
     position:relative;
     max-width:1200px;
@@ -356,7 +305,6 @@ video{
     box-shadow:0 25px 60px rgba(0,0,0,.35);
 }
 
-/* Small gold line on the top edge */
 .chapter .container::before{
     content:"";
     position:absolute;
@@ -368,7 +316,6 @@ video{
     background:#C9A227;
 }
 
-/* "Chapter One" label */
 .chapter h2{
     color:#C9A227;
     font-size:1.5rem;
@@ -377,7 +324,6 @@ video{
     margin-bottom:15px;
 }
 
-/* Chapter title */
 .chapter h1{
     font-family:'Cinzel',serif;
     font-size:3rem;
@@ -390,8 +336,6 @@ video{
     line-height:2;
     max-width:850px;
 }
-
-/* "Read My Story" style links — kept well away from the text */
 .section-btn{
     display:inline-block;
     margin-top:50px;
@@ -407,7 +351,6 @@ video{
     padding-left:10px;
 }
 
-/* Fade-in while scrolling (the .js class is added in index.html) */
 .js .reveal{
     opacity:0;
     transform:translateY(60px);
@@ -424,9 +367,6 @@ section[id]{
 }
 
 
-/*==========================================================
-    06  STATS
-==========================================================*/
 
 #stats{
     padding:120px 10%;
@@ -476,10 +416,6 @@ section[id]{
     letter-spacing:1px;
 }
 
-
-/*==========================================================
-    07  CHAPTER 4 — THE ROAD SO FAR
-==========================================================*/
 
 .journey-map{
     display:grid;
@@ -550,9 +486,6 @@ section[id]{
 }
 
 
-/*==========================================================
-    08  CHAPTER 5 — GALLERY
-==========================================================*/
 
 .gallery-grid{
     display:grid;
@@ -587,10 +520,6 @@ section[id]{
 }
 
 
-/*==========================================================
-    09  CHAPTER 6 — STORIES
-==========================================================*/
-
 .blog-preview{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -624,9 +553,6 @@ section[id]{
 }
 
 
-/*==========================================================
-    10  CHAPTER 7 — FAMILY
-==========================================================*/
 
 .family-preview{
     margin-top:60px;
@@ -641,9 +567,6 @@ section[id]{
 }
 
 
-/*==========================================================
-    11  CHAPTER 8 — GOALS
-==========================================================*/
 
 .goal-list{
     margin-top:40px;
@@ -658,9 +581,6 @@ section[id]{
 }
 
 
-/*==========================================================
-    12  CONTACT FORM
-==========================================================*/
 
 form{
     margin-top:60px;
@@ -705,7 +625,6 @@ form .btn:hover{
 }
 
 
-/* Hidden spam trap */
 .hp{
     position:absolute !important;
     left:-9999px;
@@ -715,7 +634,6 @@ form .btn:hover{
     pointer-events:none;
 }
 
-/* Message shown after pressing "Send Message" */
 .chapter .form-status{
     min-height:1.6em;
     font-size:16px;
@@ -740,10 +658,6 @@ form .btn:disabled{
 }
 
 
-/*==========================================================
-    13  FOOTER
-==========================================================*/
-
 footer{
     margin-top:45px;
     padding:70px 10%;
@@ -763,10 +677,6 @@ footer p{
     color:#999;
 }
 
-
-/*==========================================================
-    14  LIGHTBOX
-==========================================================*/
 
 #lightbox{
     position:fixed;
@@ -836,9 +746,6 @@ footer p{
 #nextImage{ right:40px; }
 
 
-/*==========================================================
-    15  BACK-TO-TOP BUTTON  (created by script.js)
-==========================================================*/
 
 #topBtn{
     position:fixed;
@@ -869,9 +776,6 @@ footer p{
 }
 
 
-/*==========================================================
-    16  JOURNAL PAGE  (older page, kept so it doesn't break)
-==========================================================*/
 
 .journal-hero{
     height:60vh;
@@ -921,10 +825,6 @@ footer p{
 }
 
 
-/*==========================================================
-    17  ANIMATIONS
-==========================================================*/
-
 @keyframes loaderLogo{
     from{ opacity:0; transform:scale(.8); }
     to  { opacity:1; transform:scale(1);  }
@@ -947,9 +847,6 @@ footer p{
 }
 
 
-/*==========================================================
-    18  RESPONSIVE
-==========================================================*/
 
 /* ---------- Laptops / tablets ---------- */
 @media(max-width:992px){
@@ -1027,7 +924,6 @@ footer p{
 /* ---------- Phones ---------- */
 @media(max-width:768px){
 
-    /* Loader */
     #loader img{
         width:110px;
         height:110px;
@@ -1043,9 +939,8 @@ footer p{
         letter-spacing:3px;
     }
 
-    /* Hero */
     #hero-video{
-        filter:none;            /* blur is heavy on phones */
+        filter:none;           
     }
 
     .hero-content{
@@ -1076,7 +971,6 @@ footer p{
         height:40px;
     }
 
-    /* Stats */
     #stats{
         padding:70px 6%;
     }
@@ -1105,7 +999,6 @@ footer p{
         font-size:.85rem;
     }
 
-    /* Chapters */
     .chapter{
         padding:22px 4%;
     }
@@ -1142,7 +1035,6 @@ footer p{
         margin-top:38px;
     }
 
-    /* Road so far */
     .journey-map{
         grid-template-columns:1fr 1fr;
         gap:10px;
@@ -1160,7 +1052,6 @@ footer p{
         margin-top:30px;
     }
 
-    /* Gallery / stories / family */
     .gallery-grid{
         grid-template-columns:1fr 1fr;
         gap:10px;
@@ -1206,7 +1097,6 @@ footer p{
         text-align:center;
     }
 
-    /* Lightbox */
     #lightbox img{
         max-width:96%;
     }
@@ -1227,7 +1117,6 @@ footer p{
     #prevImage{ left:10px;  }
     #nextImage{ right:10px; }
 
-    /* Misc */
     #topBtn{
         right:16px;
         bottom:calc(16px + env(safe-area-inset-bottom));
@@ -1258,7 +1147,6 @@ footer p{
 }
 
 
-/* ---------- Small phones ---------- */
 @media(max-width:380px){
 
     .chapter .container{
@@ -1274,8 +1162,6 @@ footer p{
     }
 }
 
-
-/* ---------- Touch screens: no sticky hover effects ---------- */
 @media(hover:none){
 
     .stat-card:hover,
@@ -1293,7 +1179,6 @@ footer p{
 }
 
 
-/* ---------- People who prefer less motion ---------- */
 @media(prefers-reduced-motion:reduce){
 
     *{
