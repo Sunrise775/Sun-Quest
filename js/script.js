@@ -1,28 +1,6 @@
-/*==========================================================
-    SUN QUEST — 1 Road at A Time
-    Main script (index.html)
-
-    CONTENTS
-    01  Helpers
-    02  Loader + hero intro
-    03  Smooth scrolling
-    04  Mobile menu
-    05  Scroll reveal + active menu link
-    06  Navbar, back-to-top button, hero parallax
-    07  Number counters
-    08  Gallery lightbox
-    09  Chapter 4 — The Road So Far
-    10  Contact form (EmailJS)
-==========================================================*/
-
 (() => {
 
   "use strict";
-
-
-  /*------------------------------------------------------
-      01  HELPERS
-  ------------------------------------------------------*/
 
   const $  = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
@@ -31,9 +9,6 @@
   const isTouch      = matchMedia("(pointer: coarse)").matches || innerWidth < 768;
 
 
-  /*------------------------------------------------------
-      02  LOADER + HERO INTRO
-  ------------------------------------------------------*/
 
   window.addEventListener("load", () => {
 
@@ -57,9 +32,6 @@
   });
 
 
-  /*------------------------------------------------------
-      03  SMOOTH SCROLLING  (links that point to #something)
-  ------------------------------------------------------*/
 
   $$('a[href^="#"]').forEach(link => {
 
@@ -78,9 +50,6 @@
   });
 
 
-  /*------------------------------------------------------
-      04  MOBILE MENU
-  ------------------------------------------------------*/
 
   const menuBtn = $("#menuBtn");
   const navMenu = $("#navMenu");
@@ -103,7 +72,6 @@
     setMenu(!navMenu.classList.contains("show"))
   );
 
-  /* Close the menu after choosing a link, on resize, or with Escape */
   $$("#navMenu a").forEach(link =>
     link.addEventListener("click", () => setMenu(false))
   );
@@ -113,11 +81,6 @@
   addEventListener("keydown", event => event.key === "Escape" && setMenu(false));
 
 
-  /*------------------------------------------------------
-      05  SCROLL REVEAL + ACTIVE MENU LINK
-  ------------------------------------------------------*/
-
-  /* Fade each chapter in the first time it comes into view */
   const revealObserver = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
@@ -135,7 +98,6 @@
   $$(".reveal").forEach(item => revealObserver.observe(item));
 
 
-  /* Highlight the menu link of the section you're reading */
   const menuLinks = $$("#navMenu a");
 
   const activeObserver = new IntersectionObserver(entries => {
@@ -157,14 +119,10 @@
     .forEach(section => activeObserver.observe(section));
 
 
-  /*------------------------------------------------------
-      06  NAVBAR, BACK-TO-TOP BUTTON, HERO PARALLAX
-  ------------------------------------------------------*/
 
   const navbar    = $("#navbar");
   const heroVideo = $("#hero-video");
 
-  /* Back-to-top button */
   const topBtn = document.createElement("button");
 
   topBtn.id   = "topBtn";
@@ -178,7 +136,6 @@
     scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" })
   );
 
-  /* One light scroll handler for everything */
   let ticking = false;
 
   const onScroll = () => {
@@ -189,7 +146,6 @@
 
     topBtn.classList.toggle("visible", y > 600);
 
-    /* Parallax only on desktop */
     if (heroVideo && !isTouch && !reduceMotion && y < innerHeight) {
       heroVideo.style.transform = `translateY(${y * 0.15}px) scale(1.05)`;
     }
@@ -211,9 +167,6 @@
   onScroll();
 
 
-  /*------------------------------------------------------
-      07  NUMBER COUNTERS
-  ------------------------------------------------------*/
 
   const stats = $("#stats");
 
@@ -252,9 +205,6 @@
   }
 
 
-  /*------------------------------------------------------
-      08  GALLERY LIGHTBOX  (with swipe on phones)
-  ------------------------------------------------------*/
 
   const photos      = $$(".gallery-card img");
   const lightbox    = $("#lightbox");
@@ -293,7 +243,6 @@
     $("#nextImage")?.addEventListener("click", () => showPhoto(current + 1));
     $("#prevImage")?.addEventListener("click", () => showPhoto(current - 1));
 
-    /* Click the dark background to close */
     lightbox.addEventListener("click", event => event.target === lightbox && closePhoto());
 
     /* Keyboard */
@@ -307,7 +256,6 @@
 
     });
 
-    /* Swipe left / right */
     let touchStartX = null;
 
     lightbox.addEventListener("touchstart", event => {
@@ -331,12 +279,6 @@
   }
 
 
-  /*------------------------------------------------------
-      09  CHAPTER 4 — THE ROAD SO FAR
-      Each button shows a preview, and "Read Full Story"
-      opens that place's own page (inside the places folder).
-      Format:  key: [ name, short description, page ]
-  ------------------------------------------------------*/
 
   const places = {
 
@@ -393,7 +335,6 @@
         <a class="story-btn" href="${place[2]}">Read Full Story →</a>
       `;
 
-      /* On phones the card is below the buttons — make sure it is seen */
       if (innerWidth < 768) {
         locationCard.scrollIntoView({
           behavior: reduceMotion ? "auto" : "smooth",
@@ -405,16 +346,6 @@
 
   });
 
-
-  /*------------------------------------------------------
-      10  CONTACT FORM  (sends the message to your email
-          using EmailJS — https://www.emailjs.com)
-
-      Paste your 3 EmailJS values below:
-        publicKey  → Account  → General  → Public Key
-        serviceId  → Email Services → your Gmail → Service ID
-        templateId → Email Templates → your template → Template ID
-  ------------------------------------------------------*/
 
   const EMAILJS = {
     publicKey:  "aa1SfF9gdjowyhD-Y",
@@ -447,16 +378,13 @@
 
       event.preventDefault();
 
-      /* Spam bots fill the hidden field — real people never see it */
       if (contactForm.elements.website.value) return;
 
-      /* Check the fields */
       if (!contactForm.checkValidity()) {
         contactForm.reportValidity();
         return;
       }
 
-      /* One message every 30 seconds */
       if (Date.now() - lastSent < 30000) {
         setStatus("Please wait a few seconds before sending another message.", "error");
         return;
